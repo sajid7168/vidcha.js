@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vidcha.js Demo – Interactive HTML5 Video Chapters </title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>vidcha.js – Demo</h1>
+    <p>Simple jQuery plugin for interactive HTML5 video chapters</p>
+    <a href="https://tobiasdueser.de/blog/vidchajs">Article</a> | <a href="https://github.com/tobiasdueser/vidcha.js">Github</a>
+  </header>
+
+  <!-- html5 video -->
+  <section class="video">
+    <video class="vidchaVideo" poster="assets/explore.jpg" controls>
+      <source src="assets/explore.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- chapter navigation / set start time in seconds -->
+  <section>
+      <ul class="vidchaNav">
+        <li data-start="0">1. Intro</li>
+        <li data-start="6.6">2. Explore</li>
+        <li data-start="24.7">3. Harvest</li>
+        <li data-start="42.3">4. Ending</li>
+      </ul>
+  </section>
+
+  <section class="main">
+  	<p>
+  	vidcha.js is a simple jQuery plugin for creating interactive chapters for HTML5 videos. By clicking on a chapter you jump directly to the appropriate position in the video. Also the current chapter is always highlighted when playing the video.
+  	</p>
+    <p class="credits">
+      Video:<br>
+      Author: <a href="http://www.andylloydcreative.com/">Andy Lloyd</a><br>
+      Licence: <a href="http://creativecommons.org/licenses/by/3.0/us/">ATTRIBUTION LICENSE 3.0</a><br>
+      Downloaded at <a href="http://mazwai.com/#/">Mazwai.com</a>
+    </p>
+  	<p>
+      <a href="https://tobiasdueser.de/legal-notice">Legal notice</a>
+      <a href="https://tobiasdueser.de/privacy-policy">Privacy policy</a>
+  	</p>
+  </section>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/vidcha.js"></script>
+
+<script>
+  $('video').click(function(){this.paused?this.play():this.pause();});
+</script>
+
+</html>
